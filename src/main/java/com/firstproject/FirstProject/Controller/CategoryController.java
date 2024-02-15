@@ -2,6 +2,7 @@ package com.firstproject.FirstProject.Controller;
 
 import com.firstproject.FirstProject.Entity.Category;
 import com.firstproject.FirstProject.Service.CategoryService;
+import jakarta.annotation.security.PermitAll;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -18,11 +19,13 @@ public class CategoryController {
     private CategoryService categoryService;
 
     @GetMapping("/categories")
+    @PermitAll
     public ResponseEntity<List<Category>> getAllCategories() {
         List<Category> categories = categoryService.getAllCategories();
         return new ResponseEntity<>(categories, HttpStatus.OK);
     }
     @GetMapping("/categories/{id}")
+    @PermitAll
     public ResponseEntity<Category> getCategoryById(@PathVariable Long id) {
         Optional<Category> categoryOptional = categoryService.getCategoryById(id);
         if (categoryOptional.isPresent()) {

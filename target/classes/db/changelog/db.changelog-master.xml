@@ -47,7 +47,7 @@
     </changeSet>
     <changeSet id="20240131-user-table" author="murat">
         <createTable tableName="user">
-            <column name="id" type="BIGINT" startWith="1" autoIncrement="true">
+            <column name="id" type="BIGINT">
                 <constraints primaryKey="true"  primaryKeyName="user_id_pk" />
             </column>
             <column name="email" type="VARCHAR(250)">
@@ -65,6 +65,8 @@
                                  constraintName="user_role_fk"
                                  referencedColumnNames="id"
                                  referencedTableName="role"/>
+        <addAutoIncrement tableName="user" columnName="id" columnDataType="bigint" startWith="100"
+                          incrementBy="1"/>
     </changeSet>
     <changeSet id="20240131-role-insert" author="murat">
         <insert tableName="role">
