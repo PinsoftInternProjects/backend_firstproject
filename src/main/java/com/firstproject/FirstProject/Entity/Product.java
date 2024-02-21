@@ -16,6 +16,7 @@ public class Product {
     private String name;
     private Float price;
     private String explanation;
+    private String base64Image;
 
     @ManyToOne
     @JoinColumn(name = "category_id")

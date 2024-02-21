@@ -12,7 +12,7 @@
             </column>
         </createTable>
     </changeSet>
-    <changeSet id="20240131-product-table" author="murat">
+    <changeSet id="20240221-product-table" author="umut">
         <createTable tableName="product">
             <column name="id" type="BIGINT" startWith="1" autoIncrement="true">
                 <constraints primaryKey="true"  primaryKeyName="product_id_pk" />
@@ -27,6 +27,9 @@
             </column>
             <column name="explanation" type="VARCHAR(250)">
                 <constraints unique="false"/>
+            </column>
+            <column name="base64Image"  type="text">
+                <constraints nullable="true" />
             </column>
         </createTable>
         <addForeignKeyConstraint baseColumnNames="category_id"

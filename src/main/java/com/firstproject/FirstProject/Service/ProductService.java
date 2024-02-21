@@ -1,10 +1,12 @@
 package com.firstproject.FirstProject.Service;
 
+import com.firstproject.FirstProject.DTO.ProductDto;
 import com.firstproject.FirstProject.Entity.Product;
 import com.firstproject.FirstProject.Repository.ProductRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.io.IOException;
 import java.util.List;
 import java.util.Optional;
 
@@ -18,5 +20,14 @@ public class ProductService {
     }
     public Optional<Product> getProductById(Long id) {
         return productRepository.findById(id);
+    }
+    public void addProduct( ProductDto productDto) throws IOException {
+        Product product = new Product();
+        product.setName(productDto.getName());
+        product.setCategory(productDto.getCategory());
+        product.setPrice(productDto.getPrice());
+        product.setExplanation(productDto.getExplanation());
+        product.setBase64Image(productDto.getBase64Image());
+        productRepository.save(product);
     }
 }
