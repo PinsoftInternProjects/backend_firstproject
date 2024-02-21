@@ -1,3 +1,4 @@
+com/firstproject/FirstProject/DTO/ProductDto.class
 com/firstproject/FirstProject/DTO/RegisterRequest$RegisterRequestBuilder.class
 com/firstproject/FirstProject/Controller/RoleController.class
 com/firstproject/FirstProject/Service/ProductService.class
@@ -10,6 +11,7 @@ com/firstproject/FirstProject/DTO/AuthenticationRequest$AuthenticationRequestBui
 com/firstproject/FirstProject/FirstProjectApplication.class
 com/firstproject/FirstProject/Service/CategoryService.class
 com/firstproject/FirstProject/Controller/CategoryController.class
+com/firstproject/FirstProject/Service/OrderService.class
 com/firstproject/FirstProject/Config/JwtAuthenticationFilter.class
 com/firstproject/FirstProject/Config/SecurityConfig.class
 com/firstproject/FirstProject/Entity/Product.class
@@ -20,10 +22,12 @@ com/firstproject/FirstProject/DTO/AuthenticationResponse.class
 com/firstproject/FirstProject/Service/RoleService.class
 com/firstproject/FirstProject/DTO/RegisterRequest.class
 com/firstproject/FirstProject/Entity/Role.class
+com/firstproject/FirstProject/Repository/OrderRepository.class
 com/firstproject/FirstProject/Repository/RoleRepository.class
 com/firstproject/FirstProject/DTO/AuthenticationResponse$AuthenticationResponseBuilder.class
 com/firstproject/FirstProject/Service/JwtService.class
 com/firstproject/FirstProject/Config/CorsConfig$1.class
+com/firstproject/FirstProject/Controller/OrderController.class
 com/firstproject/FirstProject/Controller/ProductController.class
 com/firstproject/FirstProject/Repository/ProductRepository.class
 com/firstproject/FirstProject/Repository/UserRepository.class

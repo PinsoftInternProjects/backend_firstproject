@@ -104,6 +104,7 @@
             <column name="name" value="Giyim" />
         </insert>
     </changeSet>
+    <!--
     <changeSet id="20240131-product-insert" author="murat">
         <insert tableName="product">
             <column name="id" value="1" />
@@ -120,6 +121,7 @@
             <column name="explanation" value="Apple IPhone 15 Pro" />
         </insert>
     </changeSet>
+    -->
     <changeSet id="20240221-order-table" author="murat">
         <createTable tableName="order">
             <column name="id" type="BIGINT">
