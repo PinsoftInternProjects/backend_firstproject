@@ -1,6 +1,7 @@
 package com.firstproject.FirstProject.Controller;
 
 import com.firstproject.FirstProject.DTO.ProductDto;
+import com.firstproject.FirstProject.DTO.ProductUpdateDto;
 import com.firstproject.FirstProject.Entity.Product;
 import com.firstproject.FirstProject.Service.ProductService;
 import jakarta.annotation.security.PermitAll;
@@ -41,4 +42,14 @@ public class ProductController {
     public void addProduct(@RequestBody ProductDto productDto) throws IOException {
         productService.addProduct(productDto);
     }
+
+    @PostMapping("/products/update")
+    public void  updateProduct(@RequestBody ProductUpdateDto product){
+        productService.updateProduct(product);
+    }
+    @DeleteMapping("/products/delete/{id}/{token]")
+    public void  deleteProduct(@PathVariable Long id, @PathVariable String token){
+        productService.deleteProduct(id,token);
+    }
+
 }

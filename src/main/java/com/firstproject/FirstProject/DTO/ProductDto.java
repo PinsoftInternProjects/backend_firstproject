@@ -10,5 +10,6 @@ public class ProductDto {
     private Float price;
     private String base64Image;
     private Category category;
+    private String token;
 }
 
