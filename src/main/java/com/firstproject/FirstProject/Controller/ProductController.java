@@ -47,7 +47,7 @@ public class ProductController {
     public void  updateProduct(@RequestBody ProductUpdateDto product){
         productService.updateProduct(product);
     }
-    @DeleteMapping("/products/delete/{id}/{token]")
+    @DeleteMapping("/products/delete/{id}/{token}")
     public void  deleteProduct(@PathVariable Long id, @PathVariable String token){
         productService.deleteProduct(id,token);
     }
