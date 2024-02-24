@@ -5,6 +5,7 @@
 /Users/muratozatakan/IdeaProjects/backend_firstproject/src/main/java/com/firstproject/FirstProject/Service/OrderService.java
 /Users/muratozatakan/IdeaProjects/backend_firstproject/src/main/java/com/firstproject/FirstProject/Controller/RoleController.java
 /Users/muratozatakan/IdeaProjects/backend_firstproject/src/main/java/com/firstproject/FirstProject/Repository/RoleRepository.java
+/Users/muratozatakan/IdeaProjects/backend_firstproject/src/main/java/com/firstproject/FirstProject/DTO/ProductUpdateDto.java
 /Users/muratozatakan/IdeaProjects/backend_firstproject/src/main/java/com/firstproject/FirstProject/Config/ApplicationConfig.java
 /Users/muratozatakan/IdeaProjects/backend_firstproject/src/main/java/com/firstproject/FirstProject/Entity/Product.java
 /Users/muratozatakan/IdeaProjects/backend_firstproject/src/main/java/com/firstproject/FirstProject/Config/JwtAuthenticationFilter.java

@@ -8,6 +8,7 @@ com/firstproject/FirstProject/Config/CorsConfig.class
 com/firstproject/FirstProject/Service/AuthenticationService.class
 com/firstproject/FirstProject/Entity/Category.class
 com/firstproject/FirstProject/DTO/AuthenticationRequest$AuthenticationRequestBuilder.class
+com/firstproject/FirstProject/DTO/ProductUpdateDto.class
 com/firstproject/FirstProject/FirstProjectApplication.class
 com/firstproject/FirstProject/Service/CategoryService.class
 com/firstproject/FirstProject/Controller/CategoryController.class
