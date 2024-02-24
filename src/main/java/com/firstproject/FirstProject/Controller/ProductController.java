@@ -43,7 +43,7 @@ public class ProductController {
         productService.addProduct(productDto);
     }
 
-    @PostMapping("/products/update")
+    @PutMapping("/products/update")
     public void  updateProduct(@RequestBody ProductUpdateDto product){
         productService.updateProduct(product);
     }
