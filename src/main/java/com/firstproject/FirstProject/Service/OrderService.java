@@ -24,7 +24,7 @@ public class OrderService {
 
     public void addOrder( OrderDto orderDto) throws IOException {
         Order order = new Order();
-        order.setUser_id(orderDto.getUser_id());
+        order.setUser(orderDto.getUser());
         order.setName(orderDto.getName());
         order.setPrice(orderDto.getPrice());
         order.setQuantity(orderDto.getQuantity());
