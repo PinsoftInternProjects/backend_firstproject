@@ -9,7 +9,7 @@ public class ProductDto {
     private String explanation;
     private Float price;
     private String base64Image;
-    private Category category;
+    private Long categoryId;
     private String token;
 }
 

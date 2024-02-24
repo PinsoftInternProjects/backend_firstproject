@@ -2,6 +2,7 @@ package com.firstproject.FirstProject.Service;
 
 import com.firstproject.FirstProject.DTO.ProductDto;
 import com.firstproject.FirstProject.DTO.ProductUpdateDto;
+import com.firstproject.FirstProject.Entity.Category;
 import com.firstproject.FirstProject.Entity.Product;
 import com.firstproject.FirstProject.Repository.ProductRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -17,6 +18,8 @@ public class ProductService {
     private ProductRepository productRepository;
     @Autowired
     private JwtService jwtService;
+    @Autowired
+    private CategoryService categoryService;
 
     public List<Product> getAllProducts() {
         return productRepository.findAll();
@@ -30,7 +33,8 @@ public class ProductService {
         }
         Product product = new Product();
         product.setName(productDto.getName());
-        product.setCategory(productDto.getCategory());
+        Category category = categoryService.getCategoryById(productDto.getCategoryId()).get();
+        product.setCategory(category);
         product.setPrice(productDto.getPrice());
         product.setExplanation(productDto.getExplanation());
         product.setBase64Image(productDto.getBase64Image());
