@@ -47,7 +47,8 @@ public class ProductService {
         }
         Product product = productRepository.findById(productForUpdate.getId()).get();
         product.setName(productForUpdate.getName());
-        product.setCategory(productForUpdate.getCategory());
+        Category category = categoryService.getCategoryById(productForUpdate.getCategoryId()).get();
+        product.setCategory(category);
         product.setPrice(productForUpdate.getPrice());
         product.setExplanation(productForUpdate.getExplanation());
         product.setBase64Image(productForUpdate.getBase64Image());
