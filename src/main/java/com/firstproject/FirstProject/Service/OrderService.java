@@ -30,6 +30,7 @@ public class OrderService {
         Order order = new Order();
         User user = userService.getUserById(orderDto.getUserId()).get();
         order.setUser(user);
+        order.setBase64Image(orderDto.getBase64Image());
         order.setName(orderDto.getName());
         order.setPrice(orderDto.getPrice());
         order.setQuantity(orderDto.getQuantity());
