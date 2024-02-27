@@ -122,12 +122,14 @@
         </insert>
     </changeSet>
     -->
-    <changeSet id="20240221-order-table" author="murat">
+    <changeSet id="20240227-order-table" author="umut">
         <createTable tableName="order">
             <column name="id" type="BIGINT">
                 <constraints primaryKey="true"  primaryKeyName="order_id_pk" />
             </column>
             <column name="user_id" type="BIGINT">
+            </column>
+            <column name="base64Image" type="text">
             </column>
             <column name="name" type="VARCHAR(250)">
             </column>

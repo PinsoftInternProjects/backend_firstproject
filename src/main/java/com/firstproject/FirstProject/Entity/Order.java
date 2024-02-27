@@ -14,6 +14,7 @@ public class Order {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+    private String base64Image;
     private String name;
     private float price;
     private int quantity;
