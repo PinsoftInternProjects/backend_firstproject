@@ -31,11 +31,14 @@ public class JwtService {
     }
 
     public  String generateToken(Map<String ,Object> extraClaims, UserDetails userDetails){
+        int expirationInHours = 10;
+        int expirationInMinutes = expirationInHours * 60;
+        long expirationTime = System.currentTimeMillis() + expirationInMinutes * 60 * 1000;
         return Jwts.builder()
                 .setClaims(extraClaims)
                 .setSubject(userDetails.getUsername())
                 .setIssuedAt(new Date(System.currentTimeMillis()))
-                .setExpiration(new Date(System.currentTimeMillis()+1000*60*10))
+                .setExpiration(new Date(expirationTime))
                 .signWith(getSignInKey(), SignatureAlgorithm.HS256)
                 .compact();
     }
