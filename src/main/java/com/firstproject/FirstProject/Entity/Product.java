@@ -1,5 +1,7 @@
 package com.firstproject.FirstProject.Entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonProperty;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -20,5 +22,11 @@ public class Product {
 
     @ManyToOne
     @JoinColumn(name = "category_id")
+    @JsonIgnore
     private Category category;
+
+    @JsonProperty("categoryId")
+    public Long categoryId() {
+        return category != null ? category.getId() : null;
+    }
 }
